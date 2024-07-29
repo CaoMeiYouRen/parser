@@ -1,16 +1,20 @@
 {
-  "name": "@postlight/parser",
+  "name": "@cao-mei-you-ren/postlight_parser",
   "version": "2.2.3",
   "description": "Postlight Parser transforms web pages into clean text. Publishers and programmers use it to make the web make sense, and readers use it to read any web article comfortably.",
-  "author": "Postlight <mercury@postlight.com>",
+  "author": "CaoMeiYouRen",
+  "contributors": [
+    "Postlight <mercury@postlight.com>",
+    "CaoMeiYouRen"
+  ],
   "homepage": "https://reader.postlight.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/postlight/parser.git"
+    "url": "git+https://github.com/CaoMeiYouRen/parser.git"
   },
   "bugs": {
-    "url": "https://github.com/postlight/parser/issues"
+    "url": "https://github.com/CaoMeiYouRen/parser/issues"
   },
   "keywords": [
     "mercury",
@@ -25,6 +29,16 @@
     "src/shims/"
   ],
   "main": "./dist/mercury.js",
+  "module": "./dist/mercury.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mercury.esm.js",
+      "require": "./dist/mercury.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "mercury-parser": "./cli.js",
     "postlight-parser": "./cli.js"
@@ -111,9 +125,7 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-uglify": "^6.0.1",
-    "watchify": "^3.11.1"
-  },
-  "dependencies": {
+    "watchify": "^3.11.1",
     "@babel/runtime-corejs2": "^7.2.0",
     "@postlight/ci-failed-test-reporter": "^1.0",
     "browser-request": "github:postlight/browser-request#feat-add-headers-to-response",
@@ -132,6 +144,7 @@
     "wuzzy": "^0.1.4",
     "yargs-parser": "^15.0.1"
   },
+  "dependencies": {},
   "bundleDependencies": [
     "jquery",
     "moment-timezone",
