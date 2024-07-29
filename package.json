@@ -30,10 +30,10 @@
   ],
   "main": "./dist/mercury.cjs",
   "module": "./dist/mercury.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/mercury.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/mercury.d.ts",
       "import": "./dist/mercury.mjs",
       "require": "./dist/mercury.cjs"
     }
