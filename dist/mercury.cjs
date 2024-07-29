@@ -9567,6 +9567,33 @@ async function collectAllPages({
 
 // src/mercury.js
 var Parser = {
+  /**
+   * @param {string} url
+   * @param {{
+   * html?: string
+   * fetchAllPages?: boolean;
+   * fallback?: boolean;
+   * contentType?: 'html' | 'markdown' | 'text';
+   * headers?: Record<string, string>;
+   * extend?: (loader: any) => void;
+   * customExtractor?: (content: HTMLElement) => string;
+   * }} opts
+   * @returns {Promise<{
+   * title: string | null;
+   * content: string | null;
+   * author: string | null;
+   * date_published: string | null;
+   * lead_image_url: string | null;
+   * dek: string | null;
+   * next_page_url: string | null;
+   * url: string | null;
+   * domain: string | null;
+   * excerpt: string | null;
+   * word_count: number | null;
+   * direction: 'ltr' | 'rtl' | null;
+   * total_pages: number | null;
+   * rendered_pages: number | null;}>}
+   */
   async parse(url, { html, ...opts } = {}) {
     const {
       fetchAllPages = true,
@@ -9642,9 +9669,15 @@ var Parser = {
   browser: !!import_cheerio6.default.browser,
   // A convenience method for getting a resource
   // to work with, e.g., for custom extractor generator
+  /**
+   * @param {string} url
+   */
   fetchResource(url) {
     return resource_default.create(url);
   },
+  /**
+   * @param {{ domain: string; title: { selectors: string[]; }; author: { selectors: string[]; }; content: { selectors: string[]; }; extend: { testContent: { selectors: string[]; }; }; }} extractor
+   */
   addExtractor(extractor) {
     return addExtractor(extractor);
   }
