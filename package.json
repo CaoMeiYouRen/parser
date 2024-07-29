@@ -42,8 +42,8 @@
     "access": "public"
   },
   "bin": {
-    "mercury-parser": "./cli.js",
-    "postlight-parser": "./cli.js"
+    "mercury-parser": "cli.js",
+    "postlight-parser": "cli.js"
   },
   "scripts": {
     "lint": "eslint . --fix",
@@ -153,11 +153,18 @@
     "wuzzy": "^0.1.4",
     "yargs-parser": "^15.0.1"
   },
-  "bundleDependencies": [
-    "jquery",
-    "moment-timezone",
-    "browser-request"
-  ],
+  "peerDependencies": {
+    "jquery": "^3.5.0",
+    "moment-timezone": "0.5.37"
+  },
+  "peerDependenciesMeta": {
+    "jquery": {
+      "optional": true
+    },
+    "moment-timezone": {
+      "optional": true
+    }
+  },
   "browser": {
     "main": "./dist/mercury.web.js",
     "cheerio": "./src/shims/cheerio-query",
