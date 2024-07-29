@@ -1,8 +1,8 @@
 import cheerio from 'cheerio';
 
-import { nodeIsSufficient } from 'utils/dom';
-import { cleanContent } from 'cleaners';
-import { normalizeSpaces } from 'utils/text';
+import { nodeIsSufficient } from '@/utils/dom';
+import { cleanContent } from '@/cleaners';
+import { normalizeSpaces } from '@/utils/text';
 
 import extractBestNode from './extract-best-node';
 

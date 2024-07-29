@@ -1,6 +1,6 @@
 import URL from 'url';
 
-import { getAttrs, setAttr } from 'utils/dom';
+import { getAttrs, setAttr } from '@/utils/dom';
 
 function absolutize($, rootUrl, attr) {
   const baseUrl = $('base').attr('href');

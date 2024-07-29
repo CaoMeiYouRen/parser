@@ -1,7 +1,7 @@
 import cheerio from 'cheerio';
 import iconv from 'iconv-lite';
 
-import { getEncoding } from 'utils/text';
+import { getEncoding } from '@/utils/text';
 import { fetchResource } from './utils';
 import { normalizeMetaTags, convertLazyLoadedImages, clean } from './utils/dom';
 

@@ -1,6 +1,6 @@
-import { cleanDatePublished } from 'cleaners';
-import { extractFromMeta, extractFromSelectors } from 'utils/dom';
-import { extractFromUrl } from 'utils/text';
+import { cleanDatePublished } from '@/cleaners';
+import { extractFromMeta, extractFromSelectors } from '@/utils/dom';
+import { extractFromUrl } from '@/utils/text';
 
 import {
   DATE_PUBLISHED_META_TAGS,

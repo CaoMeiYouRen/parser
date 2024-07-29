@@ -1,4 +1,4 @@
-import { convertNodeTo } from 'utils/dom';
+import { convertNodeTo } from '@/utils/dom';
 
 import { HNEWS_CONTENT_SELECTORS } from './constants';
 import { scoreNode, setScore, getOrInitScore, addScore } from './index';

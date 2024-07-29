@@ -1,4 +1,4 @@
-import { stripUnlikelyCandidates, convertToParagraphs } from 'utils/dom';
+import { stripUnlikelyCandidates, convertToParagraphs } from '@/utils/dom';
 
 import { scoreContent, findTopCandidate } from './scoring';
 

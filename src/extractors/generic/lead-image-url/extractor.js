@@ -1,5 +1,5 @@
-import { extractFromMeta } from 'utils/dom';
-import { cleanImage } from 'cleaners';
+import { extractFromMeta } from '@/utils/dom';
+import { cleanImage } from '@/cleaners';
 
 import {
   LEAD_IMAGE_URL_META_TAGS,

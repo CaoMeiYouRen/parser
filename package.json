@@ -28,12 +28,14 @@
     "cli.js",
     "src/shims/"
   ],
-  "main": "./dist/mercury.js",
-  "module": "./dist/mercury.esm.js",
+  "main": "./dist/mercury.cjs",
+  "module": "./dist/mercury.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/mercury.esm.js",
-      "require": "./dist/mercury.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/mercury.mjs",
+      "require": "./dist/mercury.cjs"
     }
   },
   "publishConfig": {
@@ -47,7 +49,7 @@
     "lint": "eslint . --fix",
     "lint:ci": "remark . && eslint .",
     "lint-fix-quiet": "eslint --fix --quiet",
-    "build": "yarn lint && rollup -c && yarn test:build",
+    "build": "rimraf dist &&cross-env NODE_ENV=production tsup",
     "build:ci": "rollup -c && yarn test:build",
     "build:web": "yarn lint && rollup -c rollup.config.web.js && yarn test:build:web",
     "build:esm": "yarn lint && rollup -c rollup.config.esm.js && yarn test:build:esm",
@@ -76,6 +78,7 @@
     "@babel/runtime": "^7.0.0",
     "@jesses/circle-github-bot": "^2.1.0",
     "@octokit/rest": "^16.9.0",
+    "@types/node": "^22.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.4.2",
@@ -85,8 +88,10 @@
     "babelrc-rollup": "^3.0.0",
     "brfs": "^2.0.1",
     "brfs-babel": "^2.0.0",
+    "browser-request": "github:postlight/browser-request#feat-add-headers-to-response",
     "browserify": "^16.2.3",
     "changelog-maker": "^2.3.0",
+    "difflib": "github:postlight/difflib.js",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^6.1.0",
@@ -118,6 +123,7 @@
     "remark-preset-lint-recommended": "^3.0.2",
     "request": "^2.88.2",
     "requirejs": "^2.3.6",
+    "rimraf": "^6.0.1",
     "rollup": "^1.1.0",
     "rollup-plugin-babel": "^4.0.1",
     "rollup-plugin-commonjs": "^9.2.0",
@@ -125,12 +131,14 @@
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-uglify": "^6.0.1",
-    "watchify": "^3.11.1",
+    "tsup": "^8.2.3",
+    "typescript": "^5.5.4",
+    "watchify": "^3.11.1"
+  },
+  "dependencies": {
     "@babel/runtime-corejs2": "^7.2.0",
     "@postlight/ci-failed-test-reporter": "^1.0",
-    "browser-request": "github:postlight/browser-request#feat-add-headers-to-response",
     "cheerio": "^0.22.0",
-    "difflib": "github:postlight/difflib.js",
     "ellipsize": "0.1.0",
     "iconv-lite": "0.5.0",
     "jquery": "^3.5.0",
@@ -139,12 +147,12 @@
     "moment-timezone": "0.5.37",
     "postman-request": "^2.88.1-postman.31",
     "string-direction": "^0.1.2",
+    "tslib": "^2.6.3",
     "turndown": "^7.1.1",
     "valid-url": "^1.0.9",
     "wuzzy": "^0.1.4",
     "yargs-parser": "^15.0.1"
   },
-  "dependencies": {},
   "bundleDependencies": [
     "jquery",
     "moment-timezone",

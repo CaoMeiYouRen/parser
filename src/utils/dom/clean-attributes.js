@@ -1,4 +1,4 @@
-import { getAttrs, setAttrs } from 'utils/dom';
+import { getAttrs, setAttrs } from '@/utils/dom';
 
 import { WHITELIST_ATTRS_RE, KEEP_CLASS } from './constants';
 

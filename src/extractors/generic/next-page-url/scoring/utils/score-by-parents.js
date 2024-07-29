@@ -1,9 +1,9 @@
-import { range } from 'utils';
+import { range } from '@/utils';
 import {
   NEGATIVE_SCORE_RE,
   POSITIVE_SCORE_RE,
   PAGE_RE,
-} from 'utils/dom/constants';
+} from '@/utils/dom/constants';
 import { EXTRANEOUS_LINK_HINTS_RE } from '../constants';
 
 function makeSig($link) {

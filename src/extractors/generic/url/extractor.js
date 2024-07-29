@@ -1,5 +1,5 @@
 import URL from 'url';
-import { extractFromMeta } from 'utils/dom';
+import { extractFromMeta } from '@/utils/dom';
 
 import { CANONICAL_META_SELECTORS } from './constants';
 

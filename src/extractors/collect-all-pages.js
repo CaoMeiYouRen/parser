@@ -1,7 +1,7 @@
-import { removeAnchor } from 'utils/text';
-import RootExtractor from 'extractors/root-extractor';
-import GenericExtractor from 'extractors/generic';
-import Resource from 'resource';
+import Resource from '@/resource';
+import RootExtractor from '@/extractors/root-extractor';
+import GenericExtractor from '@/extractors/generic';
+import { removeAnchor } from '@/utils/text';
 
 export default async function collectAllPages({
   next_page_url,
@@ -38,9 +38,7 @@ export default async function collectAllPages({
     previousUrls.push(next_page_url);
     result = {
       ...result,
-      content: `${result.content}<hr><h4>Page ${pages}</h4>${
-        nextPageResult.content
-      }`,
+      content: `${result.content}<hr><h4>Page ${pages}</h4>${nextPageResult.content}`,
     };
 
     // eslint-disable-next-line prefer-destructuring

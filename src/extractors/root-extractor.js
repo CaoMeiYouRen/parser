@@ -1,5 +1,5 @@
-import Cleaners from 'cleaners';
-import { convertNodeTo, makeLinksAbsolute } from 'utils/dom';
+import Cleaners from '@/cleaners';
+import { convertNodeTo, makeLinksAbsolute } from '@/utils/dom';
 import GenericExtractor from './generic';
 
 // Remove elements by an array of selectors

@@ -1,6 +1,6 @@
 import cheerio from 'cheerio';
 
-import { normalizeSpaces } from 'utils/text';
+import { normalizeSpaces } from '@/utils/text';
 
 const getWordCount = content => {
   const $ = cheerio.load(content);

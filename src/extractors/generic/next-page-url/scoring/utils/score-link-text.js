@@ -1,4 +1,4 @@
-import { IS_DIGIT_RE } from 'utils/text/constants';
+import { IS_DIGIT_RE } from '@/utils/text/constants';
 
 export default function scoreLinkText(linkText, pageNum) {
   // If the link text can be parsed as a number, give it a minor

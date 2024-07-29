@@ -1,5 +1,5 @@
-import { stripTags } from 'utils/dom';
-import { excerptContent, normalizeSpaces } from 'utils/text';
+import { stripTags } from '@/utils/dom';
+import { excerptContent, normalizeSpaces } from '@/utils/text';
 
 import { TEXT_LINK_RE } from './constants';
 

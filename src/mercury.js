@@ -2,12 +2,14 @@ import URL from 'url';
 import cheerio from 'cheerio';
 import TurndownService from 'turndown';
 
-import Resource from 'resource';
-import { validateUrl } from 'utils';
-import addCustomExtractor from 'extractors/add-extractor';
-import getExtractor from 'extractors/get-extractor';
-import RootExtractor, { selectExtendedTypes } from 'extractors/root-extractor';
-import collectAllPages from 'extractors/collect-all-pages';
+import addCustomExtractor from '@/extractors/add-extractor';
+import getExtractor from '@/extractors/get-extractor';
+import RootExtractor, {
+  selectExtendedTypes,
+} from '@/extractors/root-extractor';
+import collectAllPages from '@/extractors/collect-all-pages';
+import { validateUrl } from '@/utils';
+import Resource from '@/resource';
 
 const Parser = {
   async parse(url, { html, ...opts } = {}) {

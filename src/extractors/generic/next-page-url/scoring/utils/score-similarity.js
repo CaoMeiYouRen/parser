@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import difflib from 'difflib';
 
 export default function scoreSimilarity(score, articleUrl, href) {

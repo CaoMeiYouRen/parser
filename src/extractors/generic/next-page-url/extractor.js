@@ -1,6 +1,6 @@
 import URL from 'url';
 
-import { articleBaseUrl, removeAnchor } from 'utils/text';
+import { articleBaseUrl, removeAnchor } from '@/utils/text';
 import scoreLinks from './scoring/score-links';
 
 // Looks for and returns next page url

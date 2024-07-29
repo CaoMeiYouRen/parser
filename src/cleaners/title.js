@@ -1,5 +1,5 @@
-import { stripTags } from 'utils/dom';
-import { normalizeSpaces } from 'utils/text';
+import { stripTags } from '@/utils/dom';
+import { normalizeSpaces } from '@/utils/text';
 
 import { TITLE_SPLITTERS_RE } from './constants';
 import { resolveSplitTitle } from './index';

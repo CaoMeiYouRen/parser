@@ -1,5 +1,5 @@
-import { textLength, linkDensity } from 'utils/dom';
-import { hasSentenceEnd } from 'utils/text';
+import { textLength, linkDensity } from '@/utils/dom';
+import { hasSentenceEnd } from '@/utils/text';
 
 import { NON_TOP_CANDIDATE_TAGS_RE } from './constants';
 import { getScore } from './index';

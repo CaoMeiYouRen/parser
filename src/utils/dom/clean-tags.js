@@ -3,7 +3,7 @@ import {
   setScore,
   getOrInitScore,
   scoreCommas,
-} from 'extractors/generic/content/scoring';
+} from '@/extractors/generic/content/scoring';
 
 import { CLEAN_CONDITIONALLY_TAGS, KEEP_CLASS } from './constants';
 import { normalizeSpaces } from '../text';

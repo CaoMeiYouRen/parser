@@ -1,4 +1,4 @@
-import { getAttrs } from 'utils/dom';
+import { getAttrs } from '@/utils/dom';
 
 import { IS_LINK, IS_IMAGE, IS_SRCSET } from './constants';
 

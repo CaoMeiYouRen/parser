@@ -1,5 +1,5 @@
-import { cleanAuthor } from 'cleaners';
-import { extractFromMeta, extractFromSelectors } from 'utils/dom';
+import { cleanAuthor } from '@/cleaners';
+import { extractFromMeta, extractFromSelectors } from '@/utils/dom';
 
 import {
   AUTHOR_META_TAGS,

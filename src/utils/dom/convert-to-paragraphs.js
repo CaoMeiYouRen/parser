@@ -1,4 +1,4 @@
-import { brsToPs, convertNodeTo } from 'utils/dom';
+import { brsToPs, convertNodeTo } from '@/utils/dom';
 
 import { DIV_TO_P_BLOCK_TAGS } from './constants';
 

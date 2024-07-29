@@ -1,7 +1,7 @@
 import URL from 'url';
 
-import { getAttrs, isWordpress } from 'utils/dom';
-import { removeAnchor, pageNumFromUrl } from 'utils/text';
+import { getAttrs, isWordpress } from '@/utils/dom';
+import { removeAnchor, pageNumFromUrl } from '@/utils/text';
 
 import {
   scoreSimilarity,
@@ -72,9 +72,9 @@ export default function scoreLinks({
         href,
       };
     } else {
-      possiblePages[href].linkText = `${
-        possiblePages[href].linkText
-      }|${linkText}`;
+      possiblePages[
+        href
+      ].linkText = `${possiblePages[href].linkText}|${linkText}`;
     }
 
     const possiblePage = possiblePages[href];
