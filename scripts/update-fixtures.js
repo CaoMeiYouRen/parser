@@ -4,7 +4,8 @@ const { execFile, execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const URL = require('url');
-const octokit = require('@octokit/rest')();
+const { Octokit } = require('@octokit/rest');
+const octokit = new Octokit({ auth: process.env.GH_AUTH_TOKEN });
 
 const Parser = require('../dist/mercury');
 
@@ -167,12 +168,7 @@ const createAndPushBranch = ({ branchName, commitMessage }) => {
 };
 
 const createPR = ({ branchName, title, body = '' }) => {
-  octokit.authenticate({
-    type: 'token',
-    token: process.env.GH_AUTH_TOKEN,
-  });
-
-  octokit.pulls.create({
+  octokit.rest.pulls.create({
     owner: 'postlight',
     repo: 'parser',
     title,
